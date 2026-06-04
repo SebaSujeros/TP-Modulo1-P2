@@ -67,6 +67,7 @@ export default class Game extends Phaser.Scene {
     this.items = this.physics.add.group();
 
 objectsLayer.objects.forEach((objData) => {
+  
   const { x = 0, y = 0, name, type } = objData;
   switch (type) {
     case "key": {
@@ -121,10 +122,20 @@ this.physics.add.collider(this.items, platformLayer);
 
 checkWin(player, llegada) {
   if (this.itemsRecolectados >= 5) {
-    // por ahora solo un log, después agregamos la escena de victoria
-    console.log("GANASTE");
+    this.scene.start("endScene");
   } else {
-    console.log(`Te faltan ${5 - this.itemsRecolectados} items`);
+    const centerX = this.scale.width / 2;
+    const centerY = this.scale.height / 2;
+
+    const texto = this.add.text(centerX, centerY, 
+      `Te faltan ${5 - this.itemsRecolectados} llaves`, {
+      fontSize: "32px",
+      fill: "#ff0000",
+    }).setOrigin(0.5);
+
+    this.time.delayedCall(2000, () => {
+      texto.destroy();
+    });
   }
 }
 }
