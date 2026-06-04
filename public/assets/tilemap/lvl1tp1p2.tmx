@@ -58,22 +58,22 @@
   <object id="1" name="player" x="16" y="16">
    <point/>
   </object>
-  <object id="2" name="obj" type="star" x="368" y="16">
+  <object id="2" name="obj" type="key" x="368" y="16">
    <point/>
   </object>
-  <object id="3" name="obj" type="star" x="592" y="16">
+  <object id="3" name="obj" type="key" x="592" y="16">
    <point/>
   </object>
-  <object id="4" name="obj" type="star" x="592" y="528">
+  <object id="4" name="obj" type="key" x="592" y="528">
    <point/>
   </object>
-  <object id="5" name="obj" type="star" x="368" y="336">
+  <object id="5" name="obj" type="key" x="368" y="336">
    <point/>
   </object>
-  <object id="6" name="obj" type="star" x="176" y="432">
+  <object id="6" name="obj" type="key" x="176" y="432">
    <point/>
   </object>
-  <object id="7" name="llegada" x="784" y="560">
+  <object id="7" name="llegada" type="llegada" x="784" y="560">
    <point/>
   </object>
  </objectgroup>
